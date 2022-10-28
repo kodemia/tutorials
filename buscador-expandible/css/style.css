@@ -1,0 +1,38 @@
+body {
+  margin: 50px;
+}
+
+input {
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  background: #181818;
+  border: solid 2px gray;
+  border-radius: 35px;
+  outline: none;
+  color: white;
+  caret-color: cyan;
+  transform: translate(0, -50%);
+  transition: all 0.5s;
+}
+
+input:hover {
+  border-color: cyan;
+}
+
+input::placeholder {
+  color:gray;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  width: 250px;
+  border-color: cyan;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 1px 10px 0 cyan; ;
+}
